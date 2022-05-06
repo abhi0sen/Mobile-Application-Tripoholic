@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Tripoholics</string>
+    <string name="smallTrips">Small Trips</string>
+    <string name="pop_dest">Popular Destination</string>
+    <string name="gen_spin">Gen</string>
+    <string name="gender">Gender -</string>
+    <string name="address">Address</string>
+    <string name="full_name">Full Name</string>
+    <string name="no_of_seats">No of Seats</string>
+    <string name="dob">Date of Birth (DD-MM-YYYY)</string>
+    <string name="mail">E-mail</string>
+    <string name="contact">Contact no.</string>
+    <string name="water_bodies">Water Bodies</string>
+    <string name="desert_sides">Desert Sides</string>
+    <string name="holy_places">Holy Places</string>
+    <string name="view_more">View More</string>
+    <string name="register">Register</string>
+    <string name="hilly_areas">Hilly Areas</string>
+    <string name="textview">TextView</string>
+    <string name="tour_name">Hanwantya Tapu</string>
+    <string name="location">Khandwa, MP</string>
+    <string name="duration">5D/4N</string>
+    <string name="food">food</string>
+    <string name="group_music">Group Music</string>
+    <string name="bonfire">Bonfire</string>
+    <string name="book_now">Book Now</string>
+    <string name="camping">Camping</string>
+    <string name="delicious_food">Delicious Food</string>
+    <string name="sightseeing">Sightseeing</string>
+    <string name="local_guide">Local Guide</string>
+    <string name="price">- 2500/person</string>
+    <string name="music">TODO</string>
+    <string name="camp">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="password">Password</string>
+    <string name="user_profile">user profile</string>
+    <string name="home">home</string>
+    <string name="search">search</string>
+    <string name="search_msg">Now Search for the places around \n you and Get Ready for \n Exciting Holidays.</string>
+    <string name="locat">Enter Your Location</string>
+    <string name="searchEg">Eg. Indore</string>
+    <string name="confirm">Confirm</string>
+    <string name="trip_name">Trip Name</string>
+    <string name="or">OR</string>
+    <string name="qrScan">Click here to Scan QR Code</string>
+    <string name="upi">Enter UPI id</string>
+
+    <!--    Database connectivity-->
+    <string name="url">http://127.0.0.1:5500//</string>
+
+</resources>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LiveRegistration">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="398dp"
+        android:layout_height="647dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25dp"
+                android:text="Book your Tickets Now"
+                android:textSize="30dp" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/full_name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="#78909C" />
+
+            <EditText
+                android:id="@+id/dob"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/dob"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:textColorHint="#78909C" />
+
+            <LinearLayout
+                android:layout_width="303dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="79dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_marginStart="3dp"
+                    android:gravity="start|fill"
+                    android:hint="@string/gender"
+                    android:textColor="#090909"
+                    android:textColorHint="#78909C"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/genderSpinner"
+                    android:layout_width="219dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:contentDescription="@string/gen_spin"
+                    android:gravity="fill_horizontal" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/mail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/mail"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textColorHint="#78909C" />
+
+            <EditText
+                android:id="@+id/address1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/address"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="#78909C" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/contact"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:textColorHint="#78909C" />
+
+            <EditText
+                android:id="@+id/seats"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/no_of_seats"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:textColorHint="#78909C" />
+
+            <EditText
+                android:id="@+id/usernames"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Enter the names of all the members"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:textColorHint="#78909C" />
+
+            <LinearLayout
+                android:layout_width="303dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_horizontal|fill"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:foregroundGravity="center"
+                android:gravity="center|center_horizontal|fill|fill_horizontal|center_vertical|fill_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|center_horizontal|fill|fill_horizontal|center_vertical|fill_vertical"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="1"
+                    android:gravity="start|fill"
+                    android:text="Payment Option"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|fill"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center_horizontal|end" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="CancelRegister"
+                    android:text="@android:string/cancel"
+                    android:textAllCaps="false"
+                    app:cornerRadius="40dp" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="55dp"
+                    android:onClick="RegistrationForm"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    app:cornerRadius="40dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
