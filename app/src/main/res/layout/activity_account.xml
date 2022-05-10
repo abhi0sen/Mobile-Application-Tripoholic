@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2A2E44"
     tools:context=".Account">
 
     <ImageView
@@ -19,7 +20,7 @@
         tools:ignore="ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/msgTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -27,6 +28,7 @@
         android:minHeight="48dp"
         android:onClick="SignIn"
         android:text="Sign In"
+        android:textColor="#F8F4F4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,25 +43,88 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/msgTV" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/textView22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="-11dp"
+                android:backgroundTint="#F493B6"
+                android:text="Edit Details"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="#090909"
+                app:cornerRadius="0dp" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="-11dp"
+                android:backgroundTint="#F493B6"
+                android:text="Add Admin"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="#090909"
+                app:cornerRadius="0dp" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="-11dp"
+                android:backgroundTint="#F493B6"
+                android:text="Remove Admin"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="#090909"
+                app:cornerRadius="0dp" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="-11dp"
+                android:backgroundTint="#F493B6"
+                android:text="Check Admins"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="#090909"
+                app:cornerRadius="0dp" />
+        </LinearLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         android:text="Made in India ❣️"
+        android:textColor="#F8F7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

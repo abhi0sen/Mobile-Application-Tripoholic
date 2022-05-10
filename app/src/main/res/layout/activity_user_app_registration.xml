@@ -39,10 +39,12 @@
                 android:ems="10"
                 android:hint="Username"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#F4F2F2"
                 android:textColorHint="#959090" />
 
             <EditText
-                android:id="@+id/age"
+                android:id="@+id/birthDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -50,50 +52,40 @@
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="#F4C4C4"
                 android:ems="10"
-                android:hint="Age"
-                android:inputType="numberSigned"
+                android:hint="Date of Birth"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:textColor="#F4F2F2"
                 android:textColorHint="#959090" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
+            <Spinner
+                android:id="@+id/gender"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="44dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="30dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView30"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingStart="5dp"
-                    android:text="@string/gender"
-                    android:textColor="#FAF7F7"
-                    android:textColorHint="#959090"
-                    android:textSize="18sp" />
-
-                <Spinner
-                    android:id="@+id/spinner2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#F8F6F6" />
-
-            </LinearLayout>
+                android:layout_weight="1"
+                android:backgroundTint="#F8F6F6"
+                android:clipToPadding="false"
+                android:contentDescription="@string/gender"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <EditText
                 android:id="@+id/address1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="#F4C4C4"
                 android:ems="10"
                 android:hint="Address"
                 android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColor="#F4F2F2"
                 android:textColorHint="#959090" />
 
             <EditText
@@ -101,12 +93,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="#F4C4C4"
                 android:ems="10"
                 android:hint="Contact No"
                 android:inputType="phone"
+                android:minHeight="48dp"
+                android:textColor="#F4F2F2"
                 android:textColorHint="#959090" />
 
             <EditText
@@ -114,12 +108,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="#F4C4C4"
                 android:ems="10"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textColor="#F4F2F2"
                 android:textColorHint="#959090" />
 
             <EditText
@@ -127,12 +123,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="#F4C4C4"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColor="#F4F2F2"
                 android:textColorHint="#959090" />
 
             <EditText
@@ -146,6 +144,8 @@
                 android:ems="10"
                 android:hint="Confirm Password"
                 android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColor="#F4EFEF"
                 android:textColorHint="#959090" />
 
             <Button
@@ -155,12 +155,16 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="30dp"
-                android:text="Finish" />
+                android:backgroundTint="#F493B6"
+                android:text="Finish"
+                android:textColor="#070707"
+                app:cornerRadius="15dp" />
 
             <TextView
                 android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="reLogIn"
                 android:text="Already have an account? Sign In"
                 android:textAlignment="center"
                 android:textColor="#EFEBEB" />

@@ -2,7 +2,7 @@
     <string name="app_name">Tripoholics</string>
     <string name="smallTrips">Small Trips</string>
     <string name="pop_dest">Popular Destination</string>
-    <string name="gen_spin">Gen</string>
+    <string-array name="gen_spin">gen</string-array>
     <string name="gender">Gender -</string>
     <string name="address">Address</string>
     <string name="full_name">Full Name</string>
@@ -45,7 +45,15 @@
     <string name="qrScan">Click here to Scan QR Code</string>
     <string name="upi">Enter UPI id</string>
 
+    <!--    admin Stuffs-->
+    <string name="add">Add Stuffs</string>
+    <string name="payment">Payment Option</string>
+    <string name="add_trip">Add New Trip</string>
+    <string name="add_tour">Add New Tour</string>
+    <string name="modify">Modify Trip</string>
+    <string name="close">Close</string>
+
     <!--    Database connectivity-->
-    <string name="url">http://127.0.0.1:5500//</string>
+    <string name="url">http://192.168.145.177/TourAndTrips/</string>
 
 </resources>

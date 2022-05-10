@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2A2E44"
     tools:context=".SmallTrips">
 
   <ListView
@@ -19,6 +20,8 @@
       android:id="@+id/scrollView4"
       android:layout_width="408dp"
       android:layout_height="664dp"
+      android:background="#2A2E44"
+      android:backgroundTint="#2A2E44"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"
@@ -27,7 +30,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#2A2E44">
 
       <TextView
           android:id="@+id/LocationText"
@@ -35,6 +39,7 @@
           android:layout_height="wrap_content"
           android:layout_marginTop="50dp"
           android:text="@string/locat"
+          android:textColor="#F2F0F0"
           android:textSize="25sp"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
@@ -56,35 +61,38 @@
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@+id/LocationText" />
 
-      <Button
-          android:id="@+id/LocationSearch"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="40dp"
-          android:onClick="SearchText"
-          android:text="@string/search"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.5"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/UserLocation" />
-
       <TextView
           android:id="@+id/SearchMsg"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginTop="70dp"
+          android:layout_marginTop="50dp"
           android:foregroundGravity="center"
           android:gravity="center|fill"
           android:text="@string/search_msg"
           android:textAlignment="center"
           android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="#F2F0F0"
           android:textDirection="firstStrong"
           android:textSize="18sp"
           android:textStyle="italic"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintHorizontal_bias="0.501"
           app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/LocationSearch" />
+          app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+      <Button
+          android:id="@+id/button9"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="40dp"
+          android:backgroundTint="#F493B6"
+          android:onClick="SearchText"
+          android:text="Button"
+          android:textColor="#040404"
+          app:cornerRadius="50dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/UserLocation" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
   </ScrollView>

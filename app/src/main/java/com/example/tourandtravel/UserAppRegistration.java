@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,27 +23,54 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class UserAppRegistration extends AppCompatActivity {
     Button finish;
     TextView login;
-    EditText username, age, gender, address1, contact, email, password, Cpassword;
-
+    Spinner gender;
+    EditText username, dob, address1, contact, email, password, Cpassword;
+    private RequestQueue rQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_app_registration);
+
+        gender = findViewById(R.id.gender);
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("Gender");
+        arrayList.add("Male");
+        arrayList.add("Female");
+        arrayList.add("Prefer not to say");
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayList);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        gender.setAdapter(arrayAdapter);
+//        gender.setText(getAdapter(arrayAdapter));
+//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//              @Override
+//                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+////                  gender.setText("Gender");
+//                  String tutorialsName = parent.getItemAtPosition(position).toString();
+//                  Toast.makeText(parent.getContext(), "Selected: " + tutorialsName, Toast.LENGTH_LONG).show();
+//          }
+//            @Override
+//            public void onNothingSelected(AdapterView <?> parent) {
+//            }
+//        });
+
+
         username = findViewById(R.id.username);
-        age = findViewById(R.id.age);
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
+        dob = findViewById(R.id.birthDate);
         address1 = findViewById(R.id.address1);
         contact = findViewById(R.id.contact);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
         Cpassword = findViewById(R.id.cPassword);
-//        username = findViewById(R.id.gender);
         finish = findViewById(R.id.Finish);
+
 
 //        login.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -58,18 +87,21 @@ public class UserAppRegistration extends AppCompatActivity {
     }
         private void registerAction(){
             final String uname = username.getText().toString();
-            final String age1 = age.getText().toString();
+            final String dob1 = dob.getText().toString();
+            final String phone = contact.getText().toString();
+            final String location = address1.getText().toString();
             final String mail = email.getText().toString();
             final String pswd = password.getText().toString();
+            final String genSpin = gender.getSelectedItem().toString();
             final String Cpswd = Cpassword.getText().toString();
             if (uname.isEmpty()) {
                 username.setError("First name is required");
                 username.requestFocus();
                 return;
             }
-            if (age1.isEmpty()) {
-                age.setError("Last name is required");
-                age.requestFocus();
+            if (dob1.isEmpty()) {
+                dob.setError("Last name is required");
+                dob.requestFocus();
                 return;
             }
             if (mail.isEmpty()) {
@@ -82,19 +114,32 @@ public class UserAppRegistration extends AppCompatActivity {
                 password.requestFocus();
                 return;
             }
+            if (Cpswd.isEmpty()) {
+                password.setError("Confirm Your Password");
+                password.requestFocus();
+                return;
+            }
+            if (genSpin.isEmpty()) {
+                password.setError("Password is required");
+                password.requestFocus();
+                return;
+            }
+            if (phone.isEmpty()) {
+                contact.setError("Contact no is required");
+                contact.requestFocus();
+                return;
+            }
             if (!pswd.equals(Cpswd)) {
                 Cpassword.setError("Password mismatch");
                 Cpassword.requestFocus();
                 return;
             }
 
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, getResources().getString(R.string.url) + "register.php",
-                    new Response.Listener<String>() {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, getResources().getString(R.string.url) + "register.php", new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            RequestQueue rQueue = null;
-                            
                             rQueue.getCache().clear();
+
                             Log.e("Register Before TRY",response);
                             try {
                                 JSONObject jsonObject = new JSONObject(response);
@@ -121,16 +166,22 @@ public class UserAppRegistration extends AppCompatActivity {
                 protected Map<String, String> getParams() {
                     Map<String, String> params = new HashMap<String, String>();
                     params.put("username", uname);
-                    params.put("age", age1);
+                    params.put("dob", dob1);
+                    params.put("gender", genSpin);
+                    params.put("address", location);
                     params.put("email", mail);
-//                    params.put("email", mail);
+                    params.put("contact", phone);
                     params.put("password", pswd);
                     params.put("Cpassword", Cpswd);
                     return params;
                 }
             };
-            RequestQueue rQueue = Volley.newRequestQueue(UserAppRegistration.this);
+            rQueue = Volley.newRequestQueue(UserAppRegistration.this);
             rQueue.add(stringRequest);
         }
 
+        public void reLogIn(View view){
+            Intent intent = new Intent(this, LogIn.class);
+            startActivity(intent);
+        }
     }

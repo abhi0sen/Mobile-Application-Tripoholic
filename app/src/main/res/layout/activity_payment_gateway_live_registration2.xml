@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2A2E44"
     tools:context=".PaymentGatewayLiveRegistration2">
 
     <EditText
@@ -11,14 +12,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/upi"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="#F8F5F5"
+        android:textColorHint="#B2A9A9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <TextView
         android:id="@+id/textView24"
@@ -26,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/or"
+        android:textColor="#F8F5F5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,13 +52,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:backgroundTint="#F493B6"
         android:text="@string/confirm"
+        android:textColor="#0B0B0B"
         app:layout_constraintBottom_toBottomOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toEndOf="@+id/button8"
         app:layout_constraintTop_toTopOf="@+id/button8"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="#0B0B0B" />
 
     <Button
         android:id="@+id/button8"
@@ -62,7 +69,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="56dp"
+        android:backgroundTint="#F493B6"
         android:text="@android:string/cancel"
+        android:textColor="#0E0E0E"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
@@ -72,6 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="@string/trip_name"
+        android:textColor="#F8F5F5"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
