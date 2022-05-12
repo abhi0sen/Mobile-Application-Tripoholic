@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2A2E44"
+    android:background="#F3F3F4"
     tools:context=".ViewMore">
 
     <ScrollView
@@ -21,6 +21,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="15dp"
             android:paddingStart="5dp">
 
             <TextView
@@ -28,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/location"
-                android:textColor="#F1EBEB"
+                android:textColor="#101010"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tour_name"
-                android:textColor="#F1EBEB"
+                android:textColor="#101010"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +67,7 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginTop="-10dp"
                 android:text="@string/duration"
-                android:textColor="#F4EFEF"
+                android:textColor="#101010"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -73,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/price"
-                android:textColor="#F4EFEF"
+                android:textColor="#101010"
                 android:textSize="25sp"
                 app:layout_constraintStart_toEndOf="@+id/textView13"
                 app:layout_constraintTop_toTopOf="@+id/textView13" />
@@ -83,13 +87,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="190dp"
-                android:layout_marginEnd="30dp"
-                android:backgroundTint="#F493B6"
+                android:backgroundTint="#0E0E0E"
                 android:onClick="RegistrationForm"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="@string/book_now"
-                android:textColor="#050505"
+                android:textAllCaps="false"
+                android:textColor="#F1EEEE"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -101,7 +105,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="52dp"
                 android:text="@string/camping"
-                android:textColor="#F4EFEF"
+                android:textColor="#101010"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -123,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/bonfire"
-                android:textColor="#F4EFEF"
+                android:textColor="#101010"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView16"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
@@ -145,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/delicious_food"
-                android:textColor="#F4EFEF"
+                android:textColor="#101010"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView17"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -167,7 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
                 android:text="@string/sightseeing"
-                android:textColor="#F4EFEF"
+                android:textColor="#101010"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView16"
                 app:layout_constraintStart_toEndOf="@+id/imageView7"
@@ -191,7 +195,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/group_music"
-                android:textColor="#F4EFEF"
+                android:textColor="#101010"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView19"
                 app:layout_constraintTop_toBottomOf="@+id/textView19" />
@@ -213,7 +217,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="@string/local_guide"
-                android:textColor="#F4EFEF"
+                android:textColor="#101010"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView15"
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />

@@ -27,7 +27,7 @@ public class LogIn extends AppCompatActivity {
     EditText user, pass;
     Button SignIn;
     private RequestQueue rQueue;
-//    private SharedPrefrencesHelper sharedPrefrencesHelper;
+    private SharedPrefrencesHelper sharedPrefrencesHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,7 @@ public class LogIn extends AppCompatActivity {
         user = findViewById(R.id.user);
         pass = findViewById(R.id.pass);
         SignIn = findViewById(R.id.SignIn);
-//        sharedPrefrencesHelper = new SharedPrefrencesHelper(this);
+        sharedPrefrencesHelper = new SharedPrefrencesHelper(this);
         createAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +65,7 @@ public class LogIn extends AppCompatActivity {
             pass.requestFocus();
             return;
         }
-        Toast.makeText(LogIn.this, "before STRING REQ! ", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(LogIn.this, "before STRING REQ! ", Toast.LENGTH_SHORT).show();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, getResources().getString(R.string.url) + "login.php",
                 response -> {
                     Log.d(TAG, "loginAction: hare krishna");
@@ -81,10 +81,13 @@ public class LogIn extends AppCompatActivity {
                             SharedPreferences.Editor ed = sp.edit();
                             ed.putString("name", user.getText().toString());
                             ed.apply();
-//                            sharedPrefrencesHelper.setFirstname(jsonObject1.getString("firstname"));
-//                            sharedPrefrencesHelper.setLastname(jsonObject1.getString("lastname"));
-//                            sharedPrefrencesHelper.setUsername(jsonObject1.getString("username"));
-//                            sharedPrefrencesHelper.setEmail(jsonObject1.getString("email"));
+                            sharedPrefrencesHelper.setAddress(jsonObject1.getString("address"));
+                            sharedPrefrencesHelper.setDob(jsonObject1.getString("dob"));
+                            sharedPrefrencesHelper.setUsername(jsonObject1.getString("username"));
+                            sharedPrefrencesHelper.setMail(jsonObject1.getString("mail"));
+                            sharedPrefrencesHelper.setPhone(jsonObject1.getString("phone"));
+                            sharedPrefrencesHelper.setGender(jsonObject1.getString("gender"));
+                            sharedPrefrencesHelper.setRoleId(jsonObject1.getString("roleId"));
 
                             Toast.makeText(LogIn.this, "Login Successfully! ", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getBaseContext(), MainActivity.class));

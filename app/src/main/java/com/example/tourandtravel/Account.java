@@ -24,4 +24,12 @@ public class Account extends AppCompatActivity {
         Intent intent = new Intent(this, LogIn.class);
         startActivity(intent);
     }
+    public void AddAdmin(View view) {
+        Intent intent = new Intent(this, AddAdmin.class);
+        startActivity(intent);
+    }
+    public void EditDetails(View view) {
+        Intent intent = new Intent(this, EditProfileDetails.class);
+        startActivity(intent);
+    }
 }

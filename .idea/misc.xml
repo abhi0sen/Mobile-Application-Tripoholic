@@ -4,19 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/drawable/round_outline.xml" value="0.231" />
-        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_account.xml" value="0.264" />
-        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_add_admin.xml" value="0.16" />
-        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_add_new_tour.xml" value="0.136" />
-        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_add_new_trip.xml" value="0.1" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_account.xml" value="0.176" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_add_admin.xml" value="0.176" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_add_new_tour.xml" value="0.176" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_add_new_trip.xml" value="0.176" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_categoried_layout.xml" value="0.12421875" />
-        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_categorized_trips.xml" value="0.165625" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_categorized_trips.xml" value="0.2" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_edit_profile_details.xml" value="0.168359375" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_live_registration.xml" value="0.2" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_log_in.xml" value="0.2" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_modify_trip.xml" value="0.168359375" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_payment_gateway_live_registration2.xml" value="0.168359375" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_search_layout.xml" value="0.168359375" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_search_trip.xml" value="0.2" />
-        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_small_trip_search_result.xml" value="0.168359375" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_small_trip_search_result.xml" value="0.264" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_small_trips.xml" value="0.2" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_testing.xml" value="0.264" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/TourandTravel/app/src/main/res/layout/activity_user_app_registration.xml" value="0.16" />

@@ -4,17 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2A2E44"
+    android:background="#E7E8EB"
     tools:context=".SmallTripSearchResult">
 
-    <ListView
-        android:id="@+id/listview1"
-        android:layout_width="410dp"
-        android:layout_height="596dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textColor="#090909"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Tripname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="@+id/Location"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/Location"
+        app:layout_constraintTop_toBottomOf="@+id/Location" />
+
+    <TextView
+        android:id="@+id/TripDesc"
+        android:layout_width="59dp"
+        android:layout_height="18dp"
+        android:text="TextView"
+        android:textColor="#090909"
+        app:layout_constraintEnd_toEndOf="@+id/Tripname"
+        app:layout_constraintStart_toStartOf="@+id/Tripname"
+        app:layout_constraintTop_toBottomOf="@+id/Tripname" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

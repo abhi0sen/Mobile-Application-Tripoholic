@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2A2E44"
+    android:background="#E4E6ED"
     tools:context=".AddAdmin">
 
     <ScrollView
@@ -19,89 +19,124 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/AdminName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
                 android:backgroundTint="#EDE4E4"
                 android:ems="10"
+                android:hint="Enter your name"
                 android:inputType="textPersonName"
                 android:textColor="#EFE8E8" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName4"
+                android:id="@+id/DateOB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
                 android:backgroundTint="#EDE4E4"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="Enter date of birth"
+                android:inputType="date"
                 android:minHeight="48dp"
                 android:textColor="#EFE8E8" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/Genderspinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
                 android:backgroundTint="#FFFFFF"
                 android:minHeight="48dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
+                android:id="@+id/addr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
                 android:backgroundTint="#EDE4E4"
                 android:ems="10"
+                android:hint="Enter your address"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:textColor="#EFE8E8" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/pho"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
                 android:backgroundTint="#EDE4E4"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="Enter phone number"
+                android:inputType="number"
                 android:minHeight="48dp"
                 android:textColor="#EFE8E8" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName7"
+                android:id="@+id/emailAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
                 android:backgroundTint="#EDE4E4"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="Enter your mail id"
+                android:inputType="textWebEmailAddress"
                 android:minHeight="48dp"
                 android:textColor="#EFE8E8" />
 
             <EditText
-                android:id="@+id/editTextTextPassword2"
+                android:id="@+id/pswd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
                 android:backgroundTint="#EDE4E4"
                 android:ems="10"
+                android:hint="Password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:textColor="#EFE8E8" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/cpswd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
                 android:backgroundTint="#EDE4E4"
                 android:ems="10"
+                android:hint="Confirm password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
                 android:textColor="#EFE8E8" />
 
             <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
+                android:id="@+id/Add"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="add" />
+                android:layout_gravity="right"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="#0D0C0C"
+                android:text="Add"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,14 +41,14 @@ public class AddNewTrip extends AppCompatActivity {
 
 
         category = findViewById(R.id.category);
-        tripname = findViewById(R.id.tripName);
-        location = findViewById(R.id.location);
-        tourDesc = findViewById(R.id.tripDesc);
-        price = findViewById(R.id.price1);
+        tripname = findViewById(R.id.modifyName);
+        location = findViewById(R.id.ModifyLocation);
+        tourDesc = findViewById(R.id.ModifyTour);
+        price = findViewById(R.id.modifyPrice);
         cab = findViewById(R.id.cab);
         hotel = findViewById(R.id.hotel);
 //        image = findViewById(R.id.image);
-        upload = findViewById(R.id.upload);
+        upload = findViewById(R.id.ModifyUpload);
 
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("-Select-");

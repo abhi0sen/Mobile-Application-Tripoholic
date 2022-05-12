@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2A2E44"
+    android:background="#F7F8FA"
     tools:context=".SmallTrips">
 
   <ListView
@@ -20,8 +20,8 @@
       android:id="@+id/scrollView4"
       android:layout_width="408dp"
       android:layout_height="664dp"
-      android:background="#2A2E44"
-      android:backgroundTint="#2A2E44"
+      android:background="#F1F1F2"
+      android:backgroundTint="#F8F8FA"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"
@@ -31,7 +31,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2A2E44">
+        android:background="#9FF2F2F4">
 
       <TextView
           android:id="@+id/LocationText"
@@ -39,7 +39,7 @@
           android:layout_height="wrap_content"
           android:layout_marginTop="50dp"
           android:text="@string/locat"
-          android:textColor="#F2F0F0"
+          android:textColor="#070707"
           android:textSize="25sp"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
           android:completionHint="Eg. Indore"
           android:hint="@string/searchEg"
           android:minHeight="48dp"
-          android:textColorHint="#78909C"
+          android:textColorHint="#050505"
           android:textSize="20sp"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
           android:text="@string/search_msg"
           android:textAlignment="center"
           android:textAppearance="@style/TextAppearance.AppCompat.Small"
-          android:textColor="#F2F0F0"
+          android:textColor="#0E0E0E"
           android:textDirection="firstStrong"
           android:textSize="18sp"
           android:textStyle="italic"
@@ -85,10 +85,11 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="40dp"
-          android:backgroundTint="#F493B6"
+          android:backgroundTint="#1D1C1C"
           android:onClick="SearchText"
           android:text="Button"
-          android:textColor="#040404"
+          android:textAllCaps="false"
+          android:textColor="#FFF8F8"
           app:cornerRadius="50dp"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"

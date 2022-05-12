@@ -14,17 +14,25 @@
         android:theme="@style/Theme.TourAndTravel"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".EditProfileDetails"
+            android:exported="false"
+            android:parentActivityName=".Account" />
+        <activity
             android:name=".AddAdmin"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Account" />
         <activity
             android:name=".ModifyTrip"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddNewTrip"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AddNewTour"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".CategorizedTrips"
             android:exported="false"
