@@ -37,7 +37,7 @@
     <string name="home">home</string>
     <string name="search">search</string>
     <string name="search_msg">Now Search for the places around \n you and Get Ready for \n Exciting Holidays.</string>
-    <string name="locat">Enter Your Location</string>
+    <string name="locat">Search Your Location</string>
     <string name="searchEg">Eg. Indore</string>
     <string name="confirm">Confirm</string>
     <string name="trip_name">Trip Name</string>

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F1F2F6"
-    android:backgroundTint="#EFEFF1"
+    android:background="@drawable/gradient_background"
     tools:context=".LogIn">
 
     <EditText
@@ -18,7 +17,7 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#040404"
-        android:textColorHint="#8A8585"
+        android:textColorHint="#A9363434"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -56,7 +55,7 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColor="#040404"
-        android:textColorHint="#8A8585"
+        android:textColorHint="#A9363434"
         app:layout_constraintStart_toStartOf="@+id/user"
         app:layout_constraintTop_toBottomOf="@+id/user" />
 
@@ -79,7 +78,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:onClick="CreateAcco"
         android:shadowColor="#161515"
         android:text="Create Account Here!!"
         android:textColor="#0B0B0B"

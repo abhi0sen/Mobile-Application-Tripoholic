@@ -121,9 +121,6 @@ public class LogIn extends AppCompatActivity {
         rQueue = Volley.newRequestQueue(LogIn.this);
         rQueue.add(stringRequest);
     }
+
 }
 
-//    public void CreateAcco(View view) {
-//        Intent intent = new Intent(this, UserAppRegistration.class);
-//        startActivity(intent);
-//    }

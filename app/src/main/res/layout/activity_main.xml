@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AD030909"
-    android:backgroundTint="#AD030909"
+    android:background="#000000"
     android:translationZ="10dp"
     tools:context=".MainActivity">
 
@@ -24,9 +23,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#41436a"
-            android:backgroundTint="#41436a">
+            android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
@@ -47,12 +44,10 @@
                     android:id="@+id/tourImg"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:alpha="0.9"
                     android:backgroundTint="#FDF2F2"
                     android:contentDescription="@string/todo"
-                    android:cropToPadding="false"
                     android:focusable="auto"
-                    android:foregroundGravity="top"
+                    android:foreground="@drawable/image_foreground"
                     android:scaleType="fitXY"
                     app:srcCompat="@drawable/hanu" />
             </androidx.cardview.widget.CardView>
@@ -61,35 +56,44 @@
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="160dp"
-                android:backgroundTint="#AD6D9090"
+                android:backgroundTint="#57FFE6BC"
                 android:onClick="TourDetail"
                 android:text="@string/view_more"
                 android:textAllCaps="false"
-                android:textColor="#F6F2F2"
+                android:textColor="#121212"
                 android:textStyle="bold"
-                app:cornerRadius="30dp"
+                app:cornerRadius="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/button2"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="#3D3C3C"
+                app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:backgroundTint="#AD6D9090"
+                android:backgroundTint="#ffe6bc"
                 android:onClick="Register"
+                android:shadowColor="#07F63B"
+                android:shadowDy="1"
                 android:text="@string/register"
                 android:textAllCaps="false"
-                android:textColor="#EDEBEB"
+                android:textColor="#0E0E0E"
                 android:textStyle="bold"
-                app:cornerRadius="30dp"
+                android:translationZ="134dp"
+                app:cornerRadius="5dp"
                 app:layout_constraintBottom_toBottomOf="@+id/button3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/button3" />
+                app:layout_constraintTop_toTopOf="@+id/button3"
+                app:strokeColor="#3D3C3C"
+                app:strokeWidth="2dp"
+
+            />
 
             <Button
                 android:id="@+id/button4"
@@ -97,13 +101,13 @@
                 android:layout_height="65dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:backgroundTint="#AD4F6F6F"
+                android:backgroundTint="#ffe6bc"
                 android:gravity="center|start"
                 android:hapticFeedbackEnabled="false"
                 android:onClick="SmallTrips"
                 android:text="@string/smallTrips"
                 android:textAllCaps="false"
-                android:textColor="#F2F0F0"
+                android:textColor="#090909"
                 android:textColorHint="#DDD8D8"
                 android:textSize="20sp"
                 android:textStyle="normal"
@@ -125,9 +129,8 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="65dp"
                 android:layout_marginEnd="5dp"
-                android:backgroundTint="#FFFFFF"
+                android:backgroundTint="#ffe6bc"
                 android:clipToPadding="true"
-                app:cardBackgroundColor="#F493B6"
                 app:cardCornerRadius="30dp"
                 app:cardUseCompatPadding="false"
                 app:contentPaddingLeft="15dp"
@@ -288,8 +291,10 @@
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
+
                 android:layout_height="wrap_content"
-                android:autoText="false"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
                 android:background="#112A4B68"
                 android:backgroundTint="#03FFB500"
                 android:backgroundTintMode="src_in"
@@ -298,14 +303,12 @@
                 android:paddingEnd="5dp"
                 android:text="@string/tour_name"
                 android:textAllCaps="false"
-                android:textColor="#FAF8F8"
+                android:textColor="#0D0C0C"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:translationZ="3dp"
-                app:layout_constraintBottom_toTopOf="@+id/button2"
                 app:layout_constraintStart_toStartOf="@+id/button2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.342" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -314,7 +317,8 @@
                 android:background="#021E88E5"
                 android:paddingStart="5dp"
                 android:text="@string/duration"
-                android:textColor="#FBFAFA"
+                android:textAllCaps="true"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:translationZ="3dp"
@@ -324,53 +328,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#F4F2FA"
-        android:backgroundTint="#E5E2ED"
-        android:paddingStart="10dp"
-        android:paddingTop="5dp"
-        android:paddingEnd="10dp"
-        android:paddingBottom="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:backgroundTint="#02FFFFFF"
-            android:contentDescription="@string/user_profile"
-            android:onClick="Account"
-            app:srcCompat="@drawable/profile"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:backgroundTint="#00FFFFFF"
-            android:contentDescription="@string/search"
-            android:onClick="SearchTrip"
-            app:srcCompat="@drawable/search"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:backgroundTint="#07FFFFFF"
-            android:contentDescription="@string/home"
-            app:srcCompat="@drawable/home"
-            tools:ignore="TouchTargetSizeCheck" />
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/adminFeatures"
@@ -385,7 +342,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
 
         <LinearLayout
             android:layout_width="match_parent"
