@@ -54,6 +54,6 @@
     <string name="close">Close</string>
 
     <!--    Database connectivity-->
-    <string name="url">http://10.33.0.165/TourAndTrips/</string>
+    <string name="url">http://192.168.173.177/TourAndTrips/</string>
 
 </resources>

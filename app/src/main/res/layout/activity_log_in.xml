@@ -17,7 +17,7 @@
         android:hint="Username"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textColor="#F2EEEE"
+        android:textColor="#040404"
         android:textColorHint="#8A8585"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:textColor="#F2EEEE"
+        android:textColor="#040404"
         android:textColorHint="#8A8585"
         app:layout_constraintStart_toStartOf="@+id/user"
         app:layout_constraintTop_toBottomOf="@+id/user" />

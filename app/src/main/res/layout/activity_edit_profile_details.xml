@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FBF9F9"
     tools:context=".EditProfileDetails">
 
     <ScrollView
@@ -26,7 +27,8 @@
                 android:ems="10"
                 android:hint="Enter your name"
                 android:inputType="textPersonName"
-                android:padding="20dp" />
+                android:padding="20dp"
+                android:textColor="#0B0B0B" />
 
             <EditText
                 android:id="@+id/birth"
@@ -36,12 +38,13 @@
                 android:ems="10"
                 android:hint="Enter birthdate"
                 android:inputType="date"
-                android:padding="20dp" />
+                android:padding="20dp"
+                android:textColor="#0B0B0B" />
 
             <Spinner
                 android:id="@+id/gen"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:padding="20dp" />
 
@@ -53,7 +56,8 @@
                 android:ems="10"
                 android:hint="Enter your address"
                 android:inputType="textPersonName"
-                android:padding="20dp" />
+                android:padding="20dp"
+                android:textColor="#0B0B0B" />
 
             <EditText
                 android:id="@+id/phon"
@@ -63,7 +67,8 @@
                 android:ems="10"
                 android:hint="Enter phone number"
                 android:inputType="number"
-                android:padding="20dp" />
+                android:padding="20dp"
+                android:textColor="#0B0B0B" />
 
             <EditText
                 android:id="@+id/eMail"
@@ -73,7 +78,8 @@
                 android:ems="10"
                 android:hint="Enter your mail"
                 android:inputType="textEmailAddress"
-                android:padding="20dp" />
+                android:padding="20dp"
+                android:textColor="#0B0B0B" />
 
             <Button
                 android:id="@+id/confirm"

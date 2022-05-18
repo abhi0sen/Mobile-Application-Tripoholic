@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -19,74 +20,90 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 public class CategorizedTrips extends AppCompatActivity {
-//    ListView Category;
-    TextView createAcc, TRIP, DESC, PRICE;
-//    EditText user, pass;
-//    String[] arr = {"This is", "Item1", "item3"};
-//    Button SignIn;
+    ListView listView;
+    TextView createAcc, TRIP, Place, PRICE;
+    public static final String EXTRA_MESSAGE = "message";
+    String Category;
     private RequestQueue rQueue;
+    String[] arr;
+    int j = 0;
     private SharedPrefrencesHelper sharedPrefrencesHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categorized_trips);
-//        Category = findViewById(R.id.Category);
-//        msgTV= findViewById(R.id.msgTV);
-//        user = findViewById(R.id.user);
-//        pass = findViewById(R.id.pass);
-//        SignIn = findViewById(R.id.SignIn);
+        Place = findViewById(R.id.place);
+        Intent intent = getIntent();
+        Category = intent.getStringExtra(EXTRA_MESSAGE);
+
+        Place.setText(Category);
+
+
+        Log.d(TAG, "onCreate: 0" + Category);
         sharedPrefrencesHelper = new SharedPrefrencesHelper(this);
-//        createAcc.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(getBaseContext(), CategorizedTrips.class));
-//            }
-//        });
-//        SignIn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-                CategoryAction();
+
+                CategoryAction(Category);
+                listView = findViewById(R.id.listView);
     }
-    private void CategoryAction() {
+
+    private void CategoryAction(String Categry) {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, getResources().getString(R.string.url) + "category.php",
                 response -> {
                     rQueue.getCache().clear();
-                    Toast.makeText(CategorizedTrips.this, "get CACHE! ", Toast.LENGTH_SHORT).show();
-                    Log.e("anyText",response);
+                    Toast.makeText(CategorizedTrips.this, "Searching... ", Toast.LENGTH_SHORT).show();
+                    Log.e("anyText", response);
+                    String data = "";
+                    String img = "";
+                    String Locat = "";
+                    String pric = "";
+                    TRIP = findViewById(R.id.Tri);
+//                    PRICE = findViewById(R.id.PRICE);
+//                    DESC = findViewById(R.id.DESC);
                     try {
-                        JSONObject jsonObject = new JSONObject(response);
-                        if (jsonObject.optString("success").equals("1")) {
-                        Toast.makeText(CategorizedTrips.this, "in Process! ", Toast.LENGTH_SHORT).show();
-                            JSONObject jsonObject1 = jsonObject.getJSONObject("details");
+//                        JSONObject jsonObject = new JSONObject(response);
+                        JSONObject jsonRootObject = new JSONObject(response);
+                        JSONArray jsonArray = jsonRootObject.optJSONArray("details");
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            int id = 0;
+                            String name = "", Location = "";
 
-                            TRIP = findViewById(R.id.TRIP);
-                            PRICE = findViewById(R.id.PRICE);
-                            DESC = findViewById(R.id.DESC);
+                            JSONObject jsonObject = jsonArray.getJSONObject(i);
+                            if (jsonObject.optString("placeType").equals(Categry)){
+//                                id = Integer.parseInt(jsonObject.optString("tripId").toString());
+                                name = jsonObject.optString("tripName");
+                                Location = jsonObject.optString("Location");
+                                pric = jsonObject.optString("Price");
+//                                ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList(arr));
+//                                arrayList.add(data);
+//                                arr = arrayList.toArray(arr);
+//                                    arr[j] = name;
+//                                    j++;
+                                data += "Name = " + name +"\n Estimated Cost - "+pric+"\n Location - "+Location+"\n\n\n";
+//                                pric += "Estimated Cost - " + pric;
+//                                Locat += "Location - " + Location;
+                            }
 
-                            sharedPrefrencesHelper.setTripName(jsonObject1.getString("TripName"));
-                            sharedPrefrencesHelper.setLocation(jsonObject1.getString("Location"));
-                            sharedPrefrencesHelper.setTripDiscription(jsonObject1.getString("tripDiscription"));
-                            sharedPrefrencesHelper.setCab(jsonObject1.getString("cab"));
-                            sharedPrefrencesHelper.setPrice(jsonObject1.getString("Price"));
-//                            Toast.makeText(CategorizedTrips.this, "hiiiiiii", Toast.LENGTH_SHORT).show();
-                            sharedPrefrencesHelper.setHotels(jsonObject1.getString("hotels"));
+//                            int id = Integer.parseInt(jsonObject.optString("tripId").toString());
+//                            String name = jsonObject.optString("TripName");
+//                            String Location = jsonObject.optString("Location");
+//                            String Image = jsonObject.optString("image");
 
-                            TRIP.setText(sharedPrefrencesHelper.getTripName());
-                            PRICE.setText(sharedPrefrencesHelper.getLocation());
-                            DESC.setText(sharedPrefrencesHelper.getTripDiscription());
-
-                            Toast.makeText(CategorizedTrips.this, "Login Successfully! ", Toast.LENGTH_SHORT).show();
-
-//                            startActivity(new Intent(getBaseContext(), MainActivity.class));
-//                            finish();
-                        } else {
-                            Toast.makeText(CategorizedTrips.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+//                            Locat += "Location - "+Location;
                         }
+                        TRIP.setText(data);
+//                        DESC.setText(Locat);
+//                        PRICE.setText(pric);
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -96,21 +113,20 @@ public class CategorizedTrips extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(CategorizedTrips.this, error.toString(), Toast.LENGTH_LONG).show();
                     }
-                }) {
+                });
 
-
-        };
-//
-//        msgTV.setText(sR);
         rQueue = Volley.newRequestQueue(CategorizedTrips.this);
         rQueue.add(stringRequest);
 
 //        SearchLayout ad = new SearchLayout(this, R.layout.activity_search_layout, arr);
 //        Category.setAdapter(ad);
+//        SearchLayout ad = new SearchLayout(this, R.layout.activity_search_layout, arr);
+//        listView.setAdapter(ad);
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Toast.makeText(CategorizedTrips.this, "You Clicked on position "+i, Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 }
-
-//    public void CreateAcco(View view) {
-//        Intent intent = new Intent(this, UserAppRegistration.class);
-//        startActivity(intent);
-//    }

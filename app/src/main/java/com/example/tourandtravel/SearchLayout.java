@@ -31,7 +31,9 @@ public class SearchLayout extends ArrayAdapter<String> {
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_search_layout, parent, false);
-                TextView t =  convertView.findViewById(R.id.Trip);
+                TextView t =  convertView.findViewById(R.id.TRIP);
+//                TextView d =  convertView.findViewById(R.id.DESC);
+//                TextView p =  convertView.findViewById(R.id.PRICE);
                 t.setText(getItem(position));
                 convertView.setOnClickListener(new View.OnClickListener() {
                         @Override

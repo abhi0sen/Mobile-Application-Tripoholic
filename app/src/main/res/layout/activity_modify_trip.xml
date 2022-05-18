@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F2F0F0"
     tools:context=".ModifyTrip">
 
     <ScrollView
@@ -31,7 +32,7 @@
                 android:ems="10"
                 android:hint="Trip Name"
                 android:inputType="textPersonName"
-                android:textColor="#141313"
+                android:textColor="#0D0C0C"
                 android:textColorHint="#A9191919" />
 
             <EditText
@@ -46,7 +47,7 @@
                 android:hint="Location"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:textColor="#141313"
+                android:textColor="#0D0C0C"
                 android:textColorHint="#A9121111" />
 
             <LinearLayout
@@ -90,7 +91,7 @@
                 android:hint="Estimated Price"
                 android:inputType="numberDecimal"
                 android:minHeight="48dp"
-                android:textColor="#E0DCDC"
+                android:textColor="#0D0C0C"
                 android:textColorHint="#A90E0E0E" />
 
             <EditText
@@ -105,7 +106,7 @@
                 android:hint="Tour Description"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:textColor="#E0DCDC"
+                android:textColor="#0D0C0C"
                 android:textColorHint="#A9161414" />
 
             <LinearLayout
@@ -195,6 +196,7 @@
                 android:backgroundTint="#101010"
                 android:text="Upload"
                 android:textAllCaps="false"
+                android:textColor="#F1EDED"
                 app:cornerRadius="10dp" />
         </LinearLayout>
     </ScrollView>

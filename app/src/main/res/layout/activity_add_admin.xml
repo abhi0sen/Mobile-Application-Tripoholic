@@ -28,11 +28,13 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
-                android:backgroundTint="#EDE4E4"
+                android:backgroundTint="#444242"
                 android:ems="10"
-                android:hint="Enter your name"
+                android:hint="Enter Admin name"
                 android:inputType="textPersonName"
-                android:textColor="#EFE8E8" />
+                android:minHeight="48dp"
+                android:textColor="#0D0D0D"
+                android:textColorHint="#5F5C5C" />
 
             <EditText
                 android:id="@+id/DateOB"
@@ -41,12 +43,13 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
-                android:backgroundTint="#EDE4E4"
+                android:backgroundTint="#444242"
                 android:ems="10"
                 android:hint="Enter date of birth"
                 android:inputType="date"
                 android:minHeight="48dp"
-                android:textColor="#EFE8E8" />
+                android:textColor="#0D0D0D"
+                android:textColorHint="#5F5C5C" />
 
             <Spinner
                 android:id="@+id/Genderspinner"
@@ -55,7 +58,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
-                android:backgroundTint="#FFFFFF"
+                android:backgroundTint="#0D0C0C"
                 android:minHeight="48dp" />
 
             <EditText
@@ -65,12 +68,13 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
-                android:backgroundTint="#EDE4E4"
+                android:backgroundTint="#444242"
                 android:ems="10"
                 android:hint="Enter your address"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:textColor="#EFE8E8" />
+                android:textColor="#0D0D0D"
+                android:textColorHint="#5F5C5C" />
 
             <EditText
                 android:id="@+id/pho"
@@ -79,12 +83,13 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
-                android:backgroundTint="#EDE4E4"
+                android:backgroundTint="#444242"
                 android:ems="10"
                 android:hint="Enter phone number"
                 android:inputType="number"
                 android:minHeight="48dp"
-                android:textColor="#EFE8E8" />
+                android:textColor="#0D0D0D"
+                android:textColorHint="#5F5C5C" />
 
             <EditText
                 android:id="@+id/emailAdd"
@@ -93,12 +98,13 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
-                android:backgroundTint="#EDE4E4"
+                android:backgroundTint="#444242"
                 android:ems="10"
                 android:hint="Enter your mail id"
                 android:inputType="textWebEmailAddress"
                 android:minHeight="48dp"
-                android:textColor="#EFE8E8" />
+                android:textColor="#0D0D0D"
+                android:textColorHint="#5F5C5C" />
 
             <EditText
                 android:id="@+id/pswd"
@@ -107,12 +113,13 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
-                android:backgroundTint="#EDE4E4"
+                android:backgroundTint="#444242"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
-                android:textColor="#EFE8E8" />
+                android:textColor="#0D0D0D"
+                android:textColorHint="#5F5C5C" />
 
             <EditText
                 android:id="@+id/cpswd"
@@ -121,12 +128,13 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
-                android:backgroundTint="#EDE4E4"
+                android:backgroundTint="#444242"
                 android:ems="10"
                 android:hint="Confirm password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
-                android:textColor="#EFE8E8" />
+                android:textColor="#0D0D0D"
+                android:textColorHint="#5F5C5C" />
 
             <Button
                 android:id="@+id/Add"
@@ -136,7 +144,8 @@
                 android:layout_marginEnd="40dp"
                 android:backgroundTint="#0D0C0C"
                 android:text="Add"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="#FAF9F9" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

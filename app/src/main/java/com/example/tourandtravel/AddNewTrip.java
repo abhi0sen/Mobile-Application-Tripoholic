@@ -65,13 +65,13 @@ public class AddNewTrip extends AppCompatActivity {
 
 //        Categories
         ArrayList<String> cat = new ArrayList<>();
-        arrayList.add("-Select-");
-        arrayList.add("Hilly Areas");
-        arrayList.add("Water bodies");
-        arrayList.add("Desert Areas");
-        arrayList.add("Holy Places");
+        cat.add("-Select-");
+        cat.add("Hilly Areas");
+        cat.add("Water bodies");
+        cat.add("Desert Areas");
+        cat.add("Holy Places");
 
-        ArrayAdapter<String> CateAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayList);
+        ArrayAdapter<String> CateAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, cat);
         CateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         category.setAdapter(CateAdapter);
 
@@ -96,7 +96,7 @@ public class AddNewTrip extends AppCompatActivity {
         final String CateGory = category.getSelectedItem().toString();
         final String pricePer = price.getText().toString();
         final String HOTEL = hotel.getSelectedItem().toString();
-//        final String img = image.getText().toString();
+//        final String cate = category.getSelectedItem().toString();
         if (tname.isEmpty()) {
             tripname.setError("First name is required");
             tripname.requestFocus();
@@ -128,8 +128,8 @@ public class AddNewTrip extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if (jsonObject.optString("success").equals("1")) {
-                        Toast.makeText(AddNewTrip.this, "Registered Successfully! Now Login", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getBaseContext(), LogIn.class));
+                        Toast.makeText(AddNewTrip.this, "Trip Added", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getBaseContext(), MainActivity.class));
                         finish();
                     } else {
                         Toast.makeText(AddNewTrip.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
@@ -156,6 +156,7 @@ public class AddNewTrip extends AppCompatActivity {
                 params.put("cab", CAB);
                 params.put("hotel", HOTEL);
                 params.put("price", pricePer);
+//                params.put("category", cate);
 //                params.put("image", img);
                 return params;
             }

@@ -35,25 +35,22 @@ import java.util.Map;
 public class SmallTripSearchResult extends AppCompatActivity {
     private SharedPrefrencesHelper sharedPrefrencesHelper;
     public static final String EXTRA_MESSAGE = "message";
-//    ListView listView;
     String messageText;
     TextView Location, Tripname, TripDesc;
     List<tripList> tripLists;
     String[] arr = {"This is", "Item1", "item3"};
     private RequestQueue rQueue;
 
-//    JSONObject jsonObject1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_small_trip_search_result);
-//        listView = findViewById(R.id.listView1);
         tripLists = new ArrayList<>();
         Intent intent = getIntent();
         messageText = intent.getStringExtra(EXTRA_MESSAGE);
-        Log.d(TAG, "onCreate: "+EXTRA_MESSAGE);
-        Toast.makeText(SmallTripSearchResult.this, EXTRA_MESSAGE, Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "onCreate: " + EXTRA_MESSAGE);
+//        Toast.makeText(SmallTripSearchResult.this, EXTRA_MESSAGE, Toast.LENGTH_SHORT).show();
 
         Log.d(TAG, "onCreate: " + messageText);
         sharedPrefrencesHelper = new SharedPrefrencesHelper(this);
@@ -66,61 +63,49 @@ public class SmallTripSearchResult extends AppCompatActivity {
 
 
     private void loginAction(String messageText) {
-        Toast.makeText(SmallTripSearchResult.this, "hiiiiiii it is out", Toast.LENGTH_SHORT).show();
-        if (messageText.equals(sharedPrefrencesHelper.getLocation())) {
-            Toast.makeText(SmallTripSearchResult.this, "hiiiiiii it is in", Toast.LENGTH_SHORT).show();
-            Tripname.setText(sharedPrefrencesHelper.getTripName());
-            Location.setText(sharedPrefrencesHelper.getLocation());
-            TripDesc.setText(sharedPrefrencesHelper.getTripDiscription());
-        }
+//        Toast.makeText(SmallTripSearchResult.this, "hiiiiiii it is out", Toast.LENGTH_SHORT).show();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, getResources().getString(R.string.url) + "category.php",
+                response -> {
+                    rQueue.getCache().clear();
+                    Log.e("anyText", response);
+                    String tnam = "", des = "", Loc = "";
 
-//        StringRequest stringRequest = new StringRequest(Request.Method.GET, getResources().getString(R.string.url) + "category.php",
-//                response ->  {
-//                    rQueue.getCache().clear();
-//                    Toast.makeText(SmallTripSearchResult.this, "get CACHE! ", Toast.LENGTH_SHORT).show();
-//                    Log.e("anyText",response);
-//
-//                        try {
-//                            JSONArray array = new JSONArray(response);
-//
-//                            for (int i = 0; i < array.length(); i++) {
-//
-//                                //getting product object from json array
-//                                JSONObject product = array.getJSONObject(i);
-//
-//                                //adding the product to product list
-//                                tripLists.add(new tripList(
-//                                        product.getInt("tripId"),
-//                                        product.getString("TripName"),
-//                                        product.getString("Location"),
-//                                        product.getString("Price"),
-//                                        product.getString("tripDiscription"),
-//                                        product.getString("cab"),
-//                                        product.getString("hotels")
-//                                ));
-//                            }
-//
-//                            SearchLayout ad = new SearchLayout(this, R.layout.activity_search_layout, arr);
-//                            listView.setAdapter(ad);
-//
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-////                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//
-//                    }
-//                });
-        //adding our stringrequest to queue
-//        Volley.newRequestQueue(this).add(stringRequest);
-//        rQueue = Volley.newRequestQueue(SmallTripSearchResult.this);
-//        rQueue.add(stringRequest);
+                    try {
+//                        JSONObject jsonObject = new JSONObject(response);
+                        JSONObject jsonRootObject = new JSONObject(response);
+                        JSONArray jsonArray = jsonRootObject.optJSONArray("details");
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            int id = 0;
+                            String name = "", Location = "", Description = "";
+
+                            JSONObject jsonObject = jsonArray.getJSONObject(i);
+                            if (jsonObject.optString("Location").equals(messageText)) {
+//                                id = Integer.parseInt(jsonObject.optString("tripId").toString());
+                                name = jsonObject.optString("tripName");
+                                Location = jsonObject.optString("Price");
+                                Description = jsonObject.optString("tripDiscription");
+
+                                tnam += "Name = " + name+"\nDescription - " + Description+"\nPrice - " + Location+"\n\n\n";
+//                                des += "Description - " + Description;
+//                                Loc += "Location - " + Location;
+                            }
+                        }
+                        Location.setText(tnam);
+//                        TripDesc.setText(des);
+//                        Location.setText(Loc);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(SmallTripSearchResult.this, error.toString(), Toast.LENGTH_LONG).show();
+                    }
+                });
+        rQueue = Volley.newRequestQueue(SmallTripSearchResult.this);
+        rQueue.add(stringRequest);
     }
 }
-
-
-
-

@@ -70,10 +70,10 @@ public class LogIn extends AppCompatActivity {
                 response -> {
                     Log.d(TAG, "loginAction: hare krishna");
                     rQueue.getCache().clear();
-                    Toast.makeText(LogIn.this, "get CACHE! ", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(LogIn.this, "get CACHE! ", Toast.LENGTH_SHORT).show();
                     Log.e("anyText",response);
                     try {
-                        Toast.makeText(LogIn.this, "in TRY! ", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(LogIn.this, "in TRY! ", Toast.LENGTH_SHORT).show();
                         JSONObject jsonObject = new JSONObject(response);
                         if (jsonObject.optString("success").equals("1")) {
                             JSONObject jsonObject1 = jsonObject.getJSONObject("details");
@@ -93,7 +93,7 @@ public class LogIn extends AppCompatActivity {
                             startActivity(new Intent(getBaseContext(), MainActivity.class));
                             finish();
                         } else {
-                            Toast.makeText(LogIn.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LogIn.this, jsonObject.getString("Incorrect Username or Password"), Toast.LENGTH_SHORT).show();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

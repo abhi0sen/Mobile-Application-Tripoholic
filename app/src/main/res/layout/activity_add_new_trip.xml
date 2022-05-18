@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAF8F8"
     tools:context=".AddNewTrip">
 
     <ScrollView
@@ -28,10 +29,12 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="12dp"
+                android:backgroundTint="#514E4E"
                 android:ems="10"
                 android:hint="Trip Name"
                 android:inputType="textPersonName"
-                android:textColor="#141313"
+                android:minHeight="48dp"
+                android:textColor="#0B0B0B"
                 android:textColorHint="#A9191919" />
 
             <EditText
@@ -42,11 +45,12 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="12dp"
+                android:backgroundTint="#514E4E"
                 android:ems="10"
                 android:hint="Location"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:textColor="#141313"
+                android:textColor="#0B0B0B"
                 android:textColorHint="#A9121111" />
 
             <LinearLayout
@@ -68,14 +72,15 @@
 
                 <Spinner
                     android:id="@+id/category"
-                    android:layout_width="match_parent"
+                    android:layout_width="413dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="40dp"
                     android:layout_marginBottom="12dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#F8F4F4" />
+                    android:backgroundTint="#070707"
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <EditText
@@ -86,11 +91,12 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="12dp"
+                android:backgroundTint="#514E4E"
                 android:ems="10"
                 android:hint="Estimated Price"
                 android:inputType="numberDecimal"
                 android:minHeight="48dp"
-                android:textColor="#E0DCDC"
+                android:textColor="#0B0B0B"
                 android:textColorHint="#A90E0E0E" />
 
             <EditText
@@ -101,11 +107,12 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="12dp"
+                android:backgroundTint="#514E4E"
                 android:ems="10"
                 android:hint="Tour Description"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
-                android:textColor="#E0DCDC"
+                android:textColor="#0B0B0B"
                 android:textColorHint="#A9161414" />
 
             <LinearLayout
@@ -128,7 +135,7 @@
 
                 <Spinner
                     android:id="@+id/cab"
-                    android:layout_width="match_parent"
+                    android:layout_width="389dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="15dp"
@@ -146,7 +153,7 @@
 
                 <TextView
                     android:id="@+id/textView32"
-                    android:layout_width="match_parent"
+                    android:layout_width="343dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="15dp"
@@ -158,7 +165,7 @@
 
                 <Spinner
                     android:id="@+id/hotel"
-                    android:layout_width="match_parent"
+                    android:layout_width="370dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="15dp"
@@ -180,7 +187,10 @@
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="12dp"
                 android:layout_weight="1"
-                android:text="Choose Image" />
+                android:backgroundTint="#101010"
+                android:text="Choose Image"
+                android:textColor="#F1EBEB"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/ModifyUpload"
@@ -188,8 +198,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginEnd="40dp"
+                android:backgroundTint="#0D0C0C"
                 android:onClick="tripAdded"
-                android:text="Upload" />
+                android:text="Upload"
+                android:textColor="#F4EFEF" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

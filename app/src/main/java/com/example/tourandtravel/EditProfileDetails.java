@@ -115,7 +115,7 @@ public class EditProfileDetails extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         if (jsonObject.optString("success").equals("1")) {
-                            Toast.makeText(EditProfileDetails.this, "Registered Successfully! Now Login", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EditProfileDetails.this, "Profile Udated", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getBaseContext(), Account.class));
                             finish();
                         } else {
