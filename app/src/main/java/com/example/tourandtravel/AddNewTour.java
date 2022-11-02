@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class AddNewTour extends AppCompatActivity {
 
-    Button done;
+    Button done, image;
 //    TextView login;
 //    Spinner gender;
     EditText tourname, duration, seatLimit, tourDesc, tourDepart, price;

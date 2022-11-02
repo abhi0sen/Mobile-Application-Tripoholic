@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9EAEF"
+    android:background="@drawable/gradient_background"
     tools:context=".SearchTrip">
 
     <androidx.cardview.widget.CardView
@@ -28,8 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
             android:height="49dp"
-            android:background="#0E0E0D"
-            android:backgroundTint="#8D070707"
+            android:background="#1B1B1B"
             android:ems="10"
             android:hint="Search city, place, category"
             android:inputType="textPersonName"

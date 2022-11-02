@@ -10,11 +10,13 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -64,7 +66,7 @@
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="95dp"
+                android:layout_marginStart="76dp"
                 android:gravity="center"
                 android:text="@string/duration"
                 android:textColor="#101010"
@@ -85,30 +87,12 @@
                 app:layout_constraintStart_toEndOf="@+id/textView13"
                 app:layout_constraintTop_toTopOf="@+id/textView13" />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="10dp"
-                android:backgroundTint="#0E0E0E"
-                android:onClick="RegistrationForm"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:text="@string/book_now"
-                android:textAllCaps="false"
-                android:textColor="#F1EEEE"
-                app:cornerRadius="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
-
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="72dp"
+                android:layout_marginTop="78dp"
                 android:text="@string/camping"
                 android:textColor="#101010"
                 android:textSize="16sp"
@@ -119,11 +103,12 @@
                 android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="24dp"
                 android:contentDescription="@string/camp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView16"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/textView16"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/tent"
                 tools:ignore="ImageContrastCheck" />
 
@@ -180,9 +165,11 @@
                 android:textColor="#101010"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageView7"
                 app:layout_constraintTop_toTopOf="@+id/textView16"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -204,6 +191,8 @@
                 android:text="@string/group_music"
                 android:textColor="#101010"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView19"
                 app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -222,10 +211,12 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/local_guide"
                 android:textColor="#101010"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView15"
                 app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -239,6 +230,26 @@
                 app:layout_constraintTop_toTopOf="@+id/textView20"
                 app:srcCompat="@drawable/guide"
                 tools:ignore="ImageContrastCheck" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:backgroundTint="#0E0E0E"
+                android:onClick="RegistrationForm"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/book_now"
+                android:textAllCaps="false"
+                android:textColor="#F1EEEE"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

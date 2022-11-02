@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E7E9"
+    android:background="@drawable/gradient_background"
     tools:context=".PaymentGatewayLiveRegistration2">
 
     <EditText
@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:backgroundTint="#0B0A0A"
+        android:onClick="Cancel"
         android:text="@string/confirm"
         android:textAllCaps="false"
         android:textColor="#FAF7F7"
@@ -49,6 +50,7 @@
         android:layout_marginStart="96dp"
         android:layout_marginTop="52dp"
         android:backgroundTint="#0B0A0A"
+        android:onClick="Cancel"
         android:text="@android:string/cancel"
         android:textAllCaps="false"
         android:textColor="#FAF7F7"
@@ -72,7 +74,7 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:text="@string/or"
         android:textColor="#161515"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
-        android:text="@string/trip_name"
+        android:text="@string/tour_name"
         android:textColor="#141414"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"

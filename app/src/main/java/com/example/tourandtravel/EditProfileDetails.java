@@ -109,17 +109,19 @@ public class EditProfileDetails extends AppCompatActivity {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, getResources().getString(R.string.url) + "editDetail.php", new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
+
                     rQueue.getCache().clear();
 
                     Log.e("Register Before TRY",response);
                     try {
+                    Toast.makeText(EditProfileDetails.this, response, Toast.LENGTH_SHORT).show();
                         JSONObject jsonObject = new JSONObject(response);
                         if (jsonObject.optString("success").equals("1")) {
                             Toast.makeText(EditProfileDetails.this, "Profile Udated", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getBaseContext(), Account.class));
                             finish();
                         } else {
-                            Toast.makeText(EditProfileDetails.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(EditProfileDetails.this, jsonObject.getString("jbsdkjsafh"), Toast.LENGTH_SHORT).show();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();

@@ -68,7 +68,7 @@ public class LogIn extends AppCompatActivity {
 //        Toast.makeText(LogIn.this, "before STRING REQ! ", Toast.LENGTH_SHORT).show();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, getResources().getString(R.string.url) + "login.php",
                 response -> {
-                    Log.d(TAG, "loginAction: hare krishna");
+                    Log.d(TAG, "loginAction: Logged In");
                     rQueue.getCache().clear();
 //                    Toast.makeText(LogIn.this, "get CACHE! ", Toast.LENGTH_SHORT).show();
                     Log.e("anyText",response);

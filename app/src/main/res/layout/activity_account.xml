@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ADE4EDED"
-    android:backgroundTint="#ADEFF4F4"
+    android:background="@drawable/gradient_background"
     tools:context=".Account">
 
     <ImageView
@@ -23,7 +22,7 @@
     <TextView
         android:id="@+id/msgTV"
         android:layout_width="wrap_content"
-        android:layout_height="26dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:minWidth="48dp"
         android:minHeight="48dp"
@@ -115,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
-                android:layout_marginBottom="-11dp"
+                android:layout_marginBottom="-9dp"
                 android:backgroundTint="#79F4F4F4"
                 android:text="Check Admins"
                 android:textAlignment="viewStart"
@@ -131,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="Made in India ❣️"
+        android:text="@string/india"
         android:textColor="#0E0E0E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

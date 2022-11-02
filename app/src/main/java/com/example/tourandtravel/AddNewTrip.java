@@ -3,7 +3,10 @@ package com.example.tourandtravel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -23,15 +26,18 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class AddNewTrip extends AppCompatActivity {
-    Button upload;
+    Bitmap bitmap;
+    Button upload, image;
     TextView login;
     Spinner cab, hotel, category;
-    EditText tripname, location, tourDesc, price, image, feature;
+    EditText tripname, location, tourDesc, price, feature;
+
     private RequestQueue rQueue;
 
     @Override
@@ -47,8 +53,22 @@ public class AddNewTrip extends AppCompatActivity {
         price = findViewById(R.id.modifyPrice);
         cab = findViewById(R.id.cab);
         hotel = findViewById(R.id.hotel);
-//        image = findViewById(R.id.image);
+        image = findViewById(R.id.imageUpload);
         upload = findViewById(R.id.ModifyUpload);
+
+//        image.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Intent intent = new Intent();
+//
+//                intent.setType("image/*");
+//
+//                intent.setAction(Intent.ACTION_GET_CONTENT);
+//
+//                startActivityForResult(Intent.createChooser(intent, "Select Image From Gallery"), 1);
+//            }
+//        });
 
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("-Select-");
@@ -88,6 +108,31 @@ public class AddNewTrip extends AppCompatActivity {
             }
         });
     }
+
+
+//    @Override
+//    protected void onActivityResult(int RC, int RQC, Intent I) {
+//
+//        super.onActivityResult(RC, RQC, I);
+//
+//        if (RC == 1 && RQC == RESULT_OK && I != null && I.getData() != null) {
+//
+//            Uri uri = I.getData();
+//
+//            try {
+//
+//                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+//
+////                imageView.setImageBitmap(bitmap);
+//
+//            } catch (IOException e) {
+//
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+
+
     private void TourAdded(){
         final String tname = tripname.getText().toString();
         final String location1 = location.getText().toString();
@@ -166,7 +211,14 @@ public class AddNewTrip extends AppCompatActivity {
     }
 
     public void tripAdded(View view){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, imageUpload.class);
+        intent.putExtra(imageUpload.TYPE, "trip");
+        startActivity(intent);
+    }
+
+    public void image(View view){
+        Intent intent = new Intent(this, imageUpload.class);
+        intent.putExtra(imageUpload.TYPE, "trip");
         startActivity(intent);
     }
 

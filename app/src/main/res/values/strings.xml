@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Tripoholics</string>
+    <string name="app_name">Tripoholic</string>
     <string name="smallTrips">Small Trips</string>
     <string name="pop_dest">Popular Destination</string>
     <string-array name="gen_spin">gen</string-array>
-    <string name="gender">Gender -</string>
+    <string name="gender">Gender</string>
     <string name="address">Address</string>
     <string name="full_name">Full Name</string>
     <string name="no_of_seats">No of Seats</string>
@@ -35,7 +35,7 @@
     <string name="password">Password</string>
     <string name="user_profile">user profile</string>
     <string name="home">home</string>
-    <string name="search">search</string>
+    <string name="search">Search</string>
     <string name="search_msg">Now Search for the places around \n you and Get Ready for \n Exciting Holidays.</string>
     <string name="locat">Search Your Location</string>
     <string name="searchEg">Eg. Indore</string>
@@ -44,6 +44,7 @@
     <string name="or">OR</string>
     <string name="qrScan">Click here to Scan QR Code</string>
     <string name="upi">Enter UPI id</string>
+    <string name="india"><u>Made in India</u>❣️</string>
 
     <!--    admin Stuffs-->
     <string name="add">Add Stuffs</string>
@@ -54,6 +55,7 @@
     <string name="close">Close</string>
 
     <!--    Database connectivity-->
-    <string name="url">http://192.168.173.177/TourAndTrips/</string>
+    <string name="url">http://192.168.237.177/TourAndTrips/</string>
+    <string name="next">Next</string>
 
 </resources>

@@ -17,7 +17,7 @@ public class LiveRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_registration);
         Spinner spinner = findViewById(R.id.genderSpinner);
-        spinner_item("Gender", "Male", "Female", "Others", spinner);
+        spinner_item(" ", "Male", "Female", "Others", spinner);
     }
 
     public void spinner_item(String gen, String gen_male, String gen_female, String gen_others, Spinner spinner_1){

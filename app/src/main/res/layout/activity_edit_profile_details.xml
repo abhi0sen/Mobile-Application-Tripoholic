@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBF9F9"
+    android:background="@drawable/gradient_background"
     tools:context=".EditProfileDetails">
 
     <ScrollView
@@ -28,7 +28,8 @@
                 android:hint="Enter your name"
                 android:inputType="textPersonName"
                 android:padding="20dp"
-                android:textColor="#0B0B0B" />
+                android:textColor="#0B0B0B"
+                android:textColorHint="#BF0F0E0E" />
 
             <EditText
                 android:id="@+id/birth"
@@ -36,10 +37,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:ems="10"
-                android:hint="Enter birthdate"
+                android:hint="Enter birth-date"
                 android:inputType="date"
                 android:padding="20dp"
-                android:textColor="#0B0B0B" />
+                android:textColor="#0B0B0B"
+                android:textColorHint="#BF0F0E0E" />
 
             <Spinner
                 android:id="@+id/gen"
@@ -57,7 +59,8 @@
                 android:hint="Enter your address"
                 android:inputType="textPersonName"
                 android:padding="20dp"
-                android:textColor="#0B0B0B" />
+                android:textColor="#0B0B0B"
+                android:textColorHint="#BF0F0E0E" />
 
             <EditText
                 android:id="@+id/phon"
@@ -68,7 +71,8 @@
                 android:hint="Enter phone number"
                 android:inputType="number"
                 android:padding="20dp"
-                android:textColor="#0B0B0B" />
+                android:textColor="#0B0B0B"
+                android:textColorHint="#BF0F0E0E" />
 
             <EditText
                 android:id="@+id/eMail"
@@ -79,17 +83,18 @@
                 android:hint="Enter your mail"
                 android:inputType="textEmailAddress"
                 android:padding="20dp"
-                android:textColor="#0B0B0B" />
+                android:textColor="#0B0B0B"
+                android:textColorHint="#BF0F0E0E" />
 
             <Button
                 android:id="@+id/confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginEnd="40dp"
+                android:layout_gravity="center"
                 android:backgroundTint="#1B1A1A"
                 android:text="@string/confirm"
                 android:textAllCaps="false"
+                android:textColor="#FAF6F6"
                 app:cornerRadius="10dp" />
         </LinearLayout>
     </ScrollView>
